@@ -1,0 +1,399 @@
+body {
+  background: no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  background-image: url(images/Al\ -Quds.jpg);
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 20px;
+}
+.container .adkar-sabah,
+.adkar-massa,
+.adhan-button,
+.quran-container {
+  font-family: "Cairo", sans-serif;
+  background: #cfb658;
+  padding: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 5px;
+  width: 120px;
+  margin-bottom: 10px;
+  align-self: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.container .adkar-sabah-active,
+.adkar-massa-active,
+.adhan-button-active,
+.quran-container-active {
+  background: #e7c234;
+}
+.container .adkar-sabah:hover,
+.adkar-massa:hover,
+.adhan-button:hover:not(:has(.disclaimer:hover, .information-active:hover)),
+.quran-container:hover {
+  background: #e7c234;
+}
+.adhan-time .error-p {
+  display: none;
+  color: black;
+}
+.adkar-content {
+  background: white;
+  display: none;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+@media (max-width: 700px) {
+  .adkar-content {
+    width: 90%;
+  }
+}
+.adkar-content-active {
+  display: block;
+  margin-bottom: 10px;
+}
+.adkar-content ul {
+  margin: 0;
+}
+.adkar-content ul .adkar-sabah-active {
+  display: list-item;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: default;
+  column-gap: 10px;
+}
+.adkar-content ul li {
+  direction: rtl;
+  text-align: start;
+  padding: 0;
+  border-bottom: none;
+  display: none;
+  width: 100%;
+}
+.counter {
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #607b98;
+  padding: 1em;
+  margin-left: 1em;
+  align-self: stretch;
+  cursor: pointer;
+  border-radius: 5px;
+  min-height: 140px;
+  padding-bottom: 10px;
+}
+.counter:hover {
+  background: #3a699a;
+}
+.box {
+  margin-top: 3em;
+}
+.adkar-content .text {
+  width: 90%;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 0.5em;
+  line-height: 1.6;
+  padding-left: calc(10px + 0.5em);
+  padding-right: calc(10px + 0.5em);
+}
+.adkar-content .last-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.adkar-content .last-text i {
+  color: #6cb171;
+  font-size: 20px;
+}
+.adkar-content ul li .text i {
+  color: #607b98;
+  font-size: 20px;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.adkar-content ul li .text i:hover {
+  color: #6cb171;
+}
+.adkar-content .text .uil-arrow-circle-left {
+  left: -0.7em;
+}
+.adkar-content .text .uil-arrow-circle-right {
+  right: -0.7em;
+}
+.adkar-content ul li p {
+  text-align: start;
+  margin-top: 0;
+  color: #010520;
+}
+.adkar-content ul li span {
+  color: #a4a7a7;
+}
+.adkar-content ul li h5 {
+  margin: 0;
+  color: #18bc9c;
+  font-size: 14px;
+}
+.adkar-content ul li .counter i {
+  padding: 0.5em;
+  font-size: 15px;
+  color: #e2e2e2;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.adkar-content ul li .counter p {
+  font-family: "Orbitron", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #e2e2e2;
+}
+.quran {
+  display: none;
+}
+.adhan-button {
+  position: relative;
+}
+.adhan-button .disclaimer {
+  position: absolute;
+  right: 0;
+  top: 46px;
+  border: 2px solid white;
+  color: white;
+  background: #ef2f2f;
+  margin: 0;
+  padding: 0.5em;
+  display: flex;
+  font-size: 15px;
+  font-weight: 900;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.adhan-button .disclaimer:hover {
+  background: #e31111;
+  color: white;
+  border-color: white;
+}
+.adhan-button .disclaimer-active {
+  background: #e31111;
+  color: white;
+  border-color: white;
+}
+.adhan-button .disclaimer-active:hover {
+  background: #ef2f2f;
+  color: white;
+  border-color: white;
+}
+
+.adhan-button .information {
+  direction: rtl;
+  position: absolute;
+  display: none;
+  width: 100%;
+  background: #e31111;
+  text-align: center;
+  color: white;
+  top: 72px;
+  left: 50%;
+  margin: 0;
+  border-radius: 4px;
+  padding: 0.5em;
+  transform: translateX(-50%);
+  cursor: default;
+}
+.adhan-button .information-active {
+  display: block;
+}
+.quran-active {
+  max-width: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "sora reciter"
+    "button button"
+    "audio audio";
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.sora-wraper {
+  grid-area: sora;
+}
+.reciter-wraper {
+  grid-area: reciter;
+}
+.select-sora,
+.select-reciter {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.selected-reciter,
+.selected-sora {
+  background-color: #47a257;
+}
+.options {
+  height: 120px;
+  overflow-y: auto;
+}
+.active .content {
+  display: block;
+}
+.content {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+.search {
+  position: relative;
+}
+.search i {
+  position: absolute;
+  left: 12px;
+  line-height: 39px;
+  color: #a5a2a2;
+}
+.search input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  direction: rtl;
+}
+ul {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 7px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+  border-bottom: solid 1px #eeeeee;
+}
+ul p {
+  text-align: center;
+  font-size: 20px;
+}
+.submit {
+  grid-area: button;
+  border: none;
+  padding: 10px;
+  width: 100px;
+  font-size: 18px;
+  border-radius: 5px;
+  background: white;
+  justify-self: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.submit:hover {
+  background: #47a257;
+}
+.submit-active {
+  background: #47a257;
+}
+#result {
+  grid-area: audio;
+  justify-self: center;
+}
+.adhan-time {
+  display: none;
+  width: 30%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.5em;
+}
+@media (max-width: 900px) {
+  .adhan-time {
+    width: 40%;
+  }
+}
+@media (max-width: 700px) {
+  .adhan-time {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .adhan-time {
+    width: 90%;
+  }
+}
+.adhan-time p {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.adhan-time p span {
+  font-family: "Orbitron";
+  width: 50%;
+}
+.adhan-time .p-time {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #6cb171;
+  padding: 0.5em;
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: 5px;
+}
+.adhan-time .p-time span {
+  font-family: "Orbitron";
+  margin-top: 10px;
+}
+.adhan-time-active {
+  display: block;
+}
+.box-active {
+  margin-top: 9em;
+}
