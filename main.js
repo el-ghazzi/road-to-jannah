@@ -425,12 +425,12 @@ today = dd + '-' + mm + '-' + yyyy;
 
  // calling our get location and adhan function 
 
-getLocationAndFetchData(`http://api.aladhan.com/v1/timings/`)
+getLocationAndFetchData(`https://api.aladhan.com/v1/timings/`)
 
 // using interval so the function get called every 60 seconds to keep the remaining time
 // changing as the user time change
 
-setInterval(() => getLocationAndFetchData(`http://api.aladhan.com/v1/timings/`), 60000)
+setInterval(() => getLocationAndFetchData(`https://api.aladhan.com/v1/timings/`), 60000)
 
 
 quranContainer.addEventListener('click', function() {
